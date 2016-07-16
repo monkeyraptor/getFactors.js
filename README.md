@@ -11,7 +11,7 @@ JavaScript snippet to get (real number -- positive and negative) factors from a 
 
 > It only receives one argument (input).
 
-> It does not have the imaginary handler. For instance the i &times; i = -1, it's not included here.
+> It does not have the imaginary handler. For instance the i &times; i = -1. It's *not included* in this.
 
 ## Output 
 > The output will be an array for both **valid** and **invalid** inputs.
