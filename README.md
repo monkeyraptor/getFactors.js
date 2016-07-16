@@ -14,7 +14,7 @@ JavaScript snippet to get factors from a non-zero integer
 ## Output 
 > The output will be an array for both **valid** and **invalid** inputs.
 
-> For **valid** input, for example `getFactors(8)`, the output will be `[[1, 8], [2, 4], [4,2], [8, 1]]`. Each inner array is structured to be the multiplication of factors with no repeatition. 
+> For **valid** input, for example `getFactors(8)`, the output will be `[[1, 8], [2, 4], [4,2], [8, 1]]`. Each inner array is structured to be the multiplication of factors with the index combination of the, um, them pairs. 
 
 > For instance the output of `getFactors(8)` is `[[1, 8], [2, 4], [4,2], [8, 1]]` 
 
@@ -26,10 +26,12 @@ JavaScript snippet to get factors from a non-zero integer
 
 Usage | Output
 ------|--------
-`getFactors(3)` (prime) | `[[1, 3], [3, 1]]`
+`getFactors(1)` (one) | `[[1, 1]]`
+`getFactors(-1)` (negative one) | `[[-1, 1], [1, -1]]`
+`getFactors(2)` (prime) | `[[1, 2], [2, 1]]`
 `getFactors(-3)` (negative prime) | `[[-1, 3], [3, -1], [1, -3], [3, -1]]`
 `getFactors(4)` (composite) | `[[1, 4], [2, 2], [4, 1]]`
-`getFactors(-4)` (negative composite) | `[[-1, 4], [-2, 2], [-4, 1], [1, -4], [2, -2], [4, -1]]`
-`getFactors([4])` (invalid input) | `[]`
-`getFactors(4.5)` (invalid input) | `[]`
+`getFactors(-6)` (negative composite) | `[[-1, 6], [-2, 3], [-3, 2], [-6, 1], [1, -6], [2, -3], [3, -2], [6, -1]]`
+`getFactors([15])` (invalid input) | `[]`
+`getFactors(40.5)` (invalid input) | `[]`
 `getFactors("b")` (invalid input) | `[]`
