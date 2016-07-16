@@ -36,10 +36,14 @@ function getFactors(a) {
             a = Math.abs(a);
         }
         if (primeTest(a)) { // prime input
-            if (!sign) { // positive prime input
+            if (!sign) { // positive prime input                
                 result = [[1, a], [ne(1), ne(a)]];
             } else { // negative prime input
-                result = [[ne(1), a], [ne(a), 1]];
+                if (a !== 1) {
+                    result = [[ne(1), a], [ne(a), 1]];
+                } else {
+                    result = [[-1, 1]];
+                }
             }
         } else { // composite
             i = a;
