@@ -1,3 +1,4 @@
+// Docmneitoan https://github.com/monkeyraptor/getFactors.js
 function getFactors(a) {
     "use strict";
     // -----------------------------------------------
