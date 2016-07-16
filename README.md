@@ -14,7 +14,7 @@ JavaScript snippet to get factors from a non-zero integer
 ## Output 
 > The output will be an array for both **valid** and **invalid** inputs.
 
-> For **valid** input, for example `getFactors(8)`, the output will be `[[1, 8], [2, 4], [4, 2], [8, 1], [-1, -8], [-2, -4], [-4, -2], [-8, -1]]`. Each inner array is structured to be the multiplication of the factors pair. No repetition of the same pair with different order.
+> For **valid** input, for example `getFactors(8)`, the output will be `[[1, 8], [2, 4], [4, 2], [8, 1], [-1, -8], [-2, -4], [-4, -2], [-8, -1]]`. Each inner array is structured to be the multiplication of the factors pair.
 
 > For instance the output of `getFactors(8)` is `[[1, 8], [2, 4], [4, 2], [8, 1], [-1, -8], [-2, -4], [-4, -2], [-8, -1]]` 
 
@@ -27,7 +27,7 @@ JavaScript snippet to get factors from a non-zero integer
 Usage | Output
 ------|--------
 `getFactors(1)` (one) | `[[1, 1], [-1, -1]]`
-`getFactors(-1)` (negative one) | `[[-1, 1], [1, -1]]`
+`getFactors(-1)` (negative one) | `[[-1, 1]]`
 `getFactors(2)` (prime) | `[[1, 2], [-1, -2]]`
 `getFactors(-3)` (negative prime) | `[[-1, 3], [-3, 1]]`
 `getFactors(4)` (composite) | `[[1, 4], [2, 2], [4, 1], [-1, -4], [-2, -2], [-4, -1]]`
