@@ -1,5 +1,5 @@
 # getFactors.js
-JavaScript snippet to get factors from a non-zero integer
+JavaScript snippet to get (real number -- positive and negative) factors from a non-zero integer
 
 ## Usage
 > `getFactors(integer_input)`
@@ -10,6 +10,8 @@ JavaScript snippet to get factors from a non-zero integer
 > This snippet accomodates positive and negative integer (non-zero) under (absolute) 1 billion (-1,000,000,000 or 1,000,000,000).
 
 > It only receives one argument (input).
+
+> It does not have the imaginary handler. For instance the i &times; i = -1, it's not included here.
 
 ## Output 
 > The output will be an array for both **valid** and **invalid** inputs.
