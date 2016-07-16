@@ -7,14 +7,14 @@ JavaScript snippet to get factors from a non-zero integer
 > Example: `getFactors(8)`
 
 ## Input
-> This snippet accomodates positive and negative integer (non-zero).
+> This snippet accomodates positive and negative integer (non-zero) under (absolute) 1 billion (-1,000,000,000 or 1,000,000,000).
 
 > It only receives one argument (input).
 
 ## Output 
 > The output will be an array for both **valid** and **invalid** inputs.
 
-> For **valid** input, for example `getFactors(8)`, the output will be `[[1, 8], [2, 4], [4,2], [8, 1]]`. Each inner array is structured to be the multiplication of factors with the index combination of the, um, them pairs. 
+> For **valid** input, for example `getFactors(8)`, the output will be `[[1, 8], [2, 4], [4,2], [8, 1]]`. Each inner array is structured to be the multiplication of factors with the index combination of the, um, them pairs (especially for negative integer input). 
 
 > For instance the output of `getFactors(8)` is `[[1, 8], [2, 4], [4,2], [8, 1]]` 
 
