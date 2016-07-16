@@ -1,4 +1,3 @@
-// Docmneitoan https://github.com/monkeyraptor/getFactors.js
 function getFactors(a) {
     "use strict";
     // -----------------------------------------------
@@ -27,29 +26,20 @@ function getFactors(a) {
     // -----------------------------------------------
     // for handling negative integer
     var sign = 0; // negative flag
-    var resultSign1 = [];
-    var resultSign2 = [];
+    var resultSign = [];
     // -----------------------------------------------
     // cultivating factors
-    if (typeof a === "number" && a % 1 === 0 && a !== 0 && a < 1e9) {   // input must be integer number type (non zero)
-                                                                        // and below 1,000,000,000 (1 billion)
+    // >> input must be integer number type (non zero) and below 1,000,000,000 (1 billion)
+    if (typeof a === "number" && a % 1 === 0 && a !== 0 && a < 1e9) {
         if (a < 0) { // negative number input
             sign = 1; // negative flag is on
             a = Math.abs(a);
         }
         if (primeTest(a)) { // prime input
             if (!sign) { // positive prime input
-                if (a !== 1) {
-                    result = [[1, a], [a, 1]];
-                } else {
-                    result = [[1, a]];
-                }
+                result = [[1, a], [ne(1), ne(a)]];
             } else { // negative prime input
-                if (a !== 1) {
-                    result = [[ne(1), a], [ne(a), 1], [1, ne(a)], [a, ne(1)]];
-                } else {
-                    result = [[ne(1), a], [ne(a), 1]];
-                }
+                result = [[ne(1), a], [ne(a), 1]];
             }
         } else { // composite
             i = a;
@@ -58,20 +48,20 @@ function getFactors(a) {
                     div = a / i;
                     if (!sign) { // positive composite input
                         result.push([div, i]);
+                        resultSign.push([ne(div), ne(i)]);
                     } else { // negative composite input
-                        resultSign1.push([ne(div), i]);
-                        resultSign2.push([div, ne(i)]);
+                        resultSign.push([ne(div), i]);
                     }
                 }
                 i -= 1; // backward loop
             }
             if (sign) { // negative composite input
-                result = resultSign1.concat(resultSign2);
+                result = resultSign;
+            } else {
+                result = result.concat(resultSign);
             }
         }
     }
     // -----------------------------------------------
     return result;
-    // result is always an array
-    // for invalid input, the outcome will be [] (empty array)
 }
