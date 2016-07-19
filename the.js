@@ -19,14 +19,30 @@ function getFactors(a) {
         return (-1 * c);
     };
     // -----------------------------------------------
+    var checkElm = function (d, e) { // check similar elements but in reversed order
+        var k = 0;
+        var l = e.length;
+        var r = 1;
+        while (k < l) {
+            if (e[k][0] === d[1] && e[k][1] === d[0]) {
+                r = 0;
+                break;
+            }
+            k += 1;
+        }
+        return r;
+    };
+    // -----------------------------------------------
     // for handling standard (positive) integer
     var result = [];
     var i;
     var div;
+    var buff;
     // -----------------------------------------------
     // for handling negative integer
     var sign = 0; // negative flag
     var resultSign = [];
+    var buffSign;
     // -----------------------------------------------
     // cultivating factors
     // >> input must be integer number type (non zero) and below 1,000,000,000 (1 billion)
@@ -36,7 +52,7 @@ function getFactors(a) {
             a = Math.abs(a);
         }
         if (primeTest(a)) { // prime input
-            if (!sign) { // positive prime input                
+            if (!sign) { // positive prime input
                 result = [[1, a], [ne(1), ne(a)]];
             } else { // negative prime input
                 if (a !== 1) {
@@ -51,8 +67,19 @@ function getFactors(a) {
                 if (a % i === 0) {
                     div = a / i;
                     if (!sign) { // positive composite input
-                        result.push([div, i]);
-                        resultSign.push([ne(div), ne(i)]);
+                        buff = [div, i];
+                        buffSign = [ne(div), ne(i)];
+                        if (i < a) {
+                            if (checkElm(buff, result)) {
+                                result.push(buff);
+                            }
+                            if (checkElm(buffSign, resultSign)) {
+                                resultSign.push(buffSign);
+                            }
+                        } else {
+                            result.push(buff);
+                            resultSign.push(buffSign);
+                        }
                     } else { // negative composite input
                         resultSign.push([ne(div), i]);
                     }
