@@ -40,3 +40,7 @@ Usage | Output
 `getFactors(40.5)` (invalid input) | `[]`
 `getFactors("b")` (invalid input) | `[]`
 `getFactors(0)` (invalid input) | `[]`
+
+
+## With interface
+Go to <a href="portraptor.johanpaul.net/2015/09/priotizaer-prime-factorization-er.html" target="_blank" title="new tab">Port Raptor - Priotizaer</a>. Priotizaer is a bit different than this basic concept. Priotizaer is also equipped with **primes grouping**. But the first factoring idea is very similar to this.
