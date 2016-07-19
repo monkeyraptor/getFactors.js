@@ -43,4 +43,4 @@ Usage | Output
 
 
 ## With interface
-Go to <a href="http://portraptor.johanpaul.net/2015/09/priotizaer-prime-factorization-er.html">Port Raptor - Priotizaer</a>. Priotizaer is a bit different than this basic concept. Priotizaer is also equipped with **primes grouping** and produce **only** the positive factors. But the first factoring (branching) idea is very similar to this.
+Go to <a href="http://portraptor.johanpaul.net/2015/09/priotizaer-prime-factorization-er.html">Port Raptor - Priotizaer</a>. Priotizaer is a bit different than this basic concept. Priotizaer is also equipped with **primes grouping** and it produces **only** the positive factors. But the first factoring (branching division) idea is pretty similar to this -- the coding path is a bit different.
